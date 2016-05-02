@@ -3,7 +3,7 @@
 Plugin Name: Tamed Wordpress Admin Theme
 Plugin URI: http://codecanyon.net/item/tamed-wordpress-admin-theme/13800689
 Description: A powerful WordPress Admin Theme that transforms your WordPress backend into a more calm, clean and overall better place to work, personalised for your client or project.
-Version: 2.5
+Version: 2.5.6
 Author: Luc Awater
 Author URI: http://lucawater.nl
 Copyright: Luc Awater
@@ -101,44 +101,52 @@ if( class_exists('tamed') ) {
     wp_enqueue_script('uploader');
     wp_enqueue_media();
 
-    wp_enqueue_script('sortable', 'http://code.jquery.com/ui/1.11.4/jquery-ui.js');
+    wp_enqueue_script('sortable', 'https://code.jquery.com/ui/1.11.4/jquery-ui.js');
     wp_enqueue_script('menu-order', plugins_url('js/menu-order.js', __FILE__));
     wp_enqueue_script('menu-removals', plugins_url('js/menu-removals.js', __FILE__));
     wp_enqueue_script('menu-collapse', plugins_url('js/menu-collapse.js', __FILE__));
+    wp_enqueue_script('menu-names', plugins_url('js/menu-names.js', __FILE__));
   }
   add_action('admin_enqueue_scripts', 'tamed_scripts');
 
   /*
-   * Change link value for login logo
+   * Change link values for login logo
    */
   function my_login_logo_url() {
     return home_url();
   }
   add_filter( 'login_headerurl', 'my_login_logo_url' );
 
+  function my_login_logo_url_title() {
+    return get_bloginfo('name');
+  }
+  add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+
   /*
    * Add custom logo to login page
    */
-  function my_login_logo() { ?>
-    <style type="text/css">
-      body.login{
-        <?php if( get_option('tamed_bg') === 'color' ){ ?>
-          background-color: <?php echo get_option('tamed_bg_color'); ?>;
-        <?php } else { ?>
-          background-image: url(<?php echo get_option('tamed_bg_image'); ?>);
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center;
-        <?php } ?>
-      }
+  if( get_option('tamed_logo') ){
+    function my_login_logo() { ?>
+      <style type="text/css">
+        body.login{
+          <?php if( get_option('tamed_bg') === 'color' ){ ?>
+            background-color: <?php echo get_option('tamed_bg_color'); ?>;
+          <?php } else { ?>
+            background-image: url(<?php echo get_option('tamed_bg_image'); ?>);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+          <?php } ?>
+        }
 
-      .login #login h1 a {
-        background-image: url(<?php echo get_option('tamed_logo'); ?>) !important;
-        background-position: center bottom;
-      }
-    </style>
-  <?php }
-  add_action( 'login_enqueue_scripts', 'my_login_logo' );
+        .login #login h1 a {
+          background-image: url(<?php echo get_option('tamed_logo'); ?>) !important;
+          background-position: center bottom;
+        }
+      </style>
+    <?php }
+    add_action( 'login_enqueue_scripts', 'my_login_logo' );
+  }
 
   /*
    * Add custom style
@@ -213,6 +221,30 @@ if( class_exists('tamed') ) {
     add_filter( 'custom_menu_order', '__return_true' );
     add_filter( 'menu_order', 'tamed_menu_order' );
   }
+
+  /*
+   * Edit top-level menu titles
+   */
+  function edit_menu_titles() {
+    global $menu;
+
+    if( isset($GLOBALS['menu']) ){
+      $items = $GLOBALS['menu'];
+
+      foreach( $menu as $key => $value ){
+        foreach( $items as $item ){
+          $item_name = preg_replace('/[0-9]+/', '', $item[0]);
+          ( (empty($item[0])) ? $item_slug = 'separator' : $item_slug = $item[5] );
+          $item_value = get_option('tamed_menu_name_' . $item_slug);
+
+          if( $item_slug && $item_value && $item[2] == $menu[$key][2] ){
+            $menu[$key][0] = get_option('tamed_menu_name_' . $item_slug);
+          }
+        }
+      }
+    }
+  }
+  add_action( 'admin_menu', 'edit_menu_titles' );
 
   /*
    * Remove menu items
