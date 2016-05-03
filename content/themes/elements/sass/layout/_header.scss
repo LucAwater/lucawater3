@@ -1,17 +1,59 @@
 body > header{
-  @include flexbox;
-  @include align-items( center );
-  @include justify-content( space-between );
-
-  position: fixed;
-  z-index: $zIndex-header;
-
   width: 100%;
-  height: $header-height;
 
-  background-color: $grey-light;
+  background-color: $purple;
 
-  .link-logo{
-    width: 50px;
+  object{
+    z-index: 0;
+
+    width: 100%;
+    padding: 100px 150px;
+  }
+
+  div{
+    top: 100px;
+    right: 150px;
+    position: absolute;
+    z-index: 1;
+
+    button{
+      @extend %base;
+      @include appearance( none );
+
+      padding: 10px 15px;
+
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
+      cursor: pointer;
+      border-radius: 3px;
+      border: 3px solid $black;
+      background-color: $purple;
+
+      &:after{
+        @include transition( .2s );
+
+        content: "";
+
+        bottom: -15px;
+        left: -20px;
+        position: absolute;
+        z-index: -1;
+
+        width: 100%;
+        height: 100%;
+        box-sizing: content-box;
+
+        border: 3px solid black;
+        background-color: white;
+      }
+
+      &:hover:after,
+      &:focus:after{
+        bottom: -3px;
+        left: -3px;
+      }
+    }
   }
 }

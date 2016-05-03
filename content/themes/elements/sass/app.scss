@@ -12,7 +12,6 @@
 // LAYOUT
 @import
   "layout/_html",
-  "layout/_layout",
   "layout/_main",
   "layout/_header",
   "layout/_footer",
@@ -23,7 +22,5 @@
 
 // MODULE
 @import
-  "modules/_arrow",
-
   "modules/posts/_posts-thumb",
   "modules/posts/_single";

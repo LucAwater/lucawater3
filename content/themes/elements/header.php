@@ -27,6 +27,9 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Fonts from Typography.com -->
+  <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6711094/6669152/css/fonts.css" />
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/app.css">
 
@@ -36,7 +39,7 @@
 
 <body <?php body_class(); ?>>
   <header>
-    <button type="button">contact me</button>
+    <div><button type="button">contact me</button></div>
 
     <object type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/img/title.svg">Your browser does not support SVGs</object>
   </header>
