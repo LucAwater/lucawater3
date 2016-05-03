@@ -10,7 +10,7 @@
 <!--[if IE 9]>    <html class="no-js lt-ie10" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
-  <title>YOUR SITE</title>
+  <title>Luc Awater</title>
 
   <link rel="canonical" href="<?php echo home_url(); ?>">
 
@@ -35,23 +35,10 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <!-- Header -->
   <header>
-    <a class="link-logo" href="<?php echo home_url(); ?>">
-      <img src="<?php echo bloginfo( 'template_directory' ); ?>/img/logo.svg">
-    </a>
+    <button type="button">contact me</button>
 
-    <nav>
-      <?php
-      $nav = array(
-        'theme_location'  => 'menu_primary',
-        'container'       => '',
-        'items_wrap'      => '<ul>%3$s</ul>'
-      );
-
-      wp_nav_menu( $nav );
-      ?>
-    </nav>
+    <object type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/img/title.svg">Your browser does not support SVGs</object>
   </header>
 
   <!-- Main content -->

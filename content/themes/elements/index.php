@@ -1,17 +1,22 @@
 <?php
 get_header();
 
-if( have_posts() ):
-  elements_posts_start();
+$projects = get_field('projects');
 
-    while( have_posts() ): the_post();
-      get_template_part( 'content', 'post' );
-    endwhile;
+if( $projects ):
+  foreach( $projects as $project ):
 
-  elements_posts_end();
+    $date = $project['project_date'];
+    $title = $project['project_title'];
+    $url = $project['project_url'];
 
-else:
-  get_template_part( 'content', 'none' );
+    echo
+    '<li>
+      <p>' . $date . '</p>
+      <a href="' . $url . '" target="_blank"><h2>' . $title . '</h2></a>
+    </li>';
+
+  endforeach;
 endif;
 
 get_footer();
