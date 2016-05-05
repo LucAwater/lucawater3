@@ -2,4 +2,14 @@
   font-family: "Gotham A", "Gotham B";
   font-style: normal;
   font-weight: 400;
+
+  strong{
+    font-weight: 500;
+  }
+}
+
+@mixin chronicle{
+  font-family: "Chronicle Display A", "Chronicle Display B";
+  font-style: normal;
+  font-weight: 300;
 }

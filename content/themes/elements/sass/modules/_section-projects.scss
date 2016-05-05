@@ -1,0 +1,35 @@
+section.projects{
+  h1{
+    margin-bottom: 30px;
+  }
+
+  ul{
+    list-style: none;
+
+    li{
+      position: relative;
+
+      margin-bottom: 30px;
+
+      span{
+        bottom: 10px;
+        left: -130px;
+        position: absolute;
+
+        width: 100px;
+        padding-bottom: 10px;
+
+        border-bottom: 2px solid $black;
+
+        color: $purple;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      a{
+        display: inline-block;
+      }
+    }
+  }
+}

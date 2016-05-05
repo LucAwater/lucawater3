@@ -1,23 +1,38 @@
-<?php
-get_header();
+<?php get_header(); ?>
 
-$projects = get_field('projects');
+<section class="projects">
+  <h1>Selected Projects</h1>
 
-if( $projects ):
-  foreach( $projects as $project ):
+  <?php
+  /*
+   * Get projects from ACF custom field on homepage
+   */
+  $projects = get_field('projects');
 
-    $date = $project['project_date'];
-    $title = $project['project_title'];
-    $url = $project['project_url'];
+  if( $projects ):
 
-    echo
-    '<li>
-      <p>' . $date . '</p>
-      <a href="' . $url . '" target="_blank"><h2>' . $title . '</h2></a>
-    </li>';
+    echo '<ul>';
 
-  endforeach;
-endif;
+      foreach( $projects as $project ):
 
-get_footer();
-?>
+        $date = $project['project_date'];
+        $title = $project['project_title'];
+        $url = $project['project_url'];
+        ?>
+
+        <li>
+          <span><?php echo $date; ?></span>
+          <a href="<?php echo $url; ?>" target="_blank"><h2><?php echo $title; ?></h2></a>
+        </li>
+
+        <?php
+      endforeach;
+
+    echo '</ul>';
+
+  endif;
+  ?>
+
+</section>
+
+<?php get_footer(); ?>

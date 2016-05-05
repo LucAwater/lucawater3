@@ -3,6 +3,17 @@ main{
   height: 100%;
   min-height: 100%;
   overflow: hidden;
+  padding: 100px 50px 50px;
 
   background-color: $white;
+
+  section{
+    width: 100%;
+    max-width: 800px;
+    margin: 150px auto;
+
+    &:first-child{
+      margin-top: 0;
+    }
+  }
 }

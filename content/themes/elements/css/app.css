@@ -25,20 +25,24 @@ time, a, body > header div button {
   font-family: "Gotham A", "Gotham B";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  font-weight: normal; }
+  font-size: 16px; }
+  h1 strong, h2 strong, p strong, span strong,
+  time strong, a strong, body > header div button strong {
+    font-weight: 500; }
 
 h1 {
-  font-size: 4.5em; }
-
-article h1 {
-  font-size: 2.5em; }
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.6; }
 
 h2 {
-  font-size: 2em; }
+  font-family: "Chronicle Display A", "Chronicle Display B";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 60px; }
 
 p {
-  font-size: .9em; }
+  font-size: 18px; }
 
 article p {
   margin-bottom: 1em;
@@ -92,15 +96,39 @@ main {
   height: 100%;
   min-height: 100%;
   overflow: hidden;
+  padding: 100px 50px 50px;
   background-color: white; }
+  main section {
+    width: 100%;
+    max-width: 800px;
+    margin: 150px auto; }
+    main section:first-child {
+      margin-top: 0; }
 
+@keyframes background-transition {
+  0% {
+    background-color: #6F53F0; }
+  30% {
+    background-color: #5853F0; }
+  60% {
+    background-color: #563DF7; }
+  100% {
+    background-color: #6F53F0; } }
 body > header {
   width: 100%;
-  background-color: #6f53f0; }
+  padding: 50px; }
   body > header object {
     z-index: 0;
     width: 100%;
-    padding: 100px 150px; }
+    display: block;
+    padding: 100px 150px;
+    background-color: black; }
+    body > header object svg {
+      fill: #6f53f0; }
+    body > header object svg g:first-child path {
+      fill: #6f53f0;
+      animation: background-transition 3s linear infinite;
+      -webkit-animation: background-transition 3s linear infinite; }
   body > header div {
     top: 100px;
     right: 150px;
@@ -114,10 +142,11 @@ body > header {
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 2px;
+      color: #6f53f0;
       cursor: pointer;
       border-radius: 3px;
-      border: 3px solid black;
-      background-color: #6f53f0; }
+      border: 2px solid #6f53f0;
+      background-color: black; }
       body > header div button:after {
         -webkit-transition: 0.2s;
         -moz-transition: 0.2s;
@@ -132,11 +161,11 @@ body > header {
         width: 100%;
         height: 100%;
         box-sizing: content-box;
-        border: 3px solid black;
+        border: 2px solid #6f53f0;
         background-color: white; }
       body > header div button:hover:after, body > header div button:focus:after {
-        bottom: -3px;
-        left: -3px; }
+        bottom: -2px;
+        left: -2px; }
 
 body > footer {
   padding-top: 20px;
@@ -206,39 +235,23 @@ nav ul {
 nav ul li.current {
   text-decoration: underline; }
 
-ul.posts li div {
-  padding: 15px 30px;
-  background-color: #f3f4f5; }
-  ul.posts li div .post-category {
-    margin-bottom: 10px;
-    display: inline-block;
-    text-decoration: none; }
-  ul.posts li div .post-title {
-    display: block; }
-ul.posts li div:first-child {
-  padding-bottom: 200px; }
-ul.posts li img {
-  display: block;
-  margin-top: -185px; }
-
-body.single-post article {
-  max-width: 900px;
-  margin: 0 auto; }
-  body.single-post article header {
-    margin-bottom: 50px; }
-
-body.single-post article header .post-categories {
-  float: left; }
-  body.single-post article header .post-categories a {
-    border: none; }
-  body.single-post article header .post-categories span {
-    color: #888888; }
-  body.single-post article header .post-categories span:last-child {
-    display: none; }
-body.single-post article header time {
-  float: right; }
-body.single-post article header h1 {
-  padding-top: 15px; }
-body.single-post article header h1,
-body.single-post article header h2 {
-  clear: both; }
+section.projects h1 {
+  margin-bottom: 30px; }
+section.projects ul {
+  list-style: none; }
+  section.projects ul li {
+    position: relative;
+    margin-bottom: 30px; }
+    section.projects ul li span {
+      bottom: 10px;
+      left: -130px;
+      position: absolute;
+      width: 100px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid black;
+      color: #6f53f0;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px; }
+    section.projects ul li a {
+      display: inline-block; }

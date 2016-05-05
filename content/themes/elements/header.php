@@ -7,15 +7,13 @@
 ?>
 
 <!DOCTYPE html>
-<!--[if IE 9]>    <html class="no-js lt-ie10" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
   <title>Luc Awater</title>
 
   <link rel="canonical" href="<?php echo home_url(); ?>">
 
   <!-- META TAGS -->
-  <meta charset="<?php bloginfo( 'charset' ); ?>" />
+  <meta charset="utf-8  " />
   <meta name="description" content="">
 
   <meta property="og:title" content="">
@@ -44,5 +42,7 @@
     <object type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/img/title.svg">Your browser does not support SVGs</object>
   </header>
 
-  <!-- Main content -->
   <main role="main">
+    <section class="text">
+      <h1>I am a <strong>web developer</strong> + designer from the Netherlands, currently living in Stockholm.</h1>
+    </section>
