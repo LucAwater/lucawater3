@@ -14,13 +14,11 @@
 
   <!-- META TAGS -->
   <meta charset="utf-8  " />
-  <meta name="description" content="">
+  <meta name="description" content="web developer + designer">
 
-  <meta property="og:title" content="">
-  <meta property="og:site_name" content="">
-  <meta property="og:description" content="">
-  <meta property="og:image" content="">
-  <meta property="og:url" content="">
+  <meta property="og:title" content="Luc Awater">
+  <meta property="og:description" content="web developer + designer">
+  <meta property="og:url" content="<?php echo home_url(); ?>">
 
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,14 +33,12 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
-  <header>
-    <div><button type="button">contact me</button></div>
-
-    <object type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/img/title.svg">Your browser does not support SVGs</object>
-  </header>
-
+<body>
   <main role="main">
+    <header>
+      <h1><strong>Luc Awater</strong><br>writes code for web</h1>
+    </header>
+    
     <section class="text">
-      <h1>I am a <strong>web developer</strong> + designer from the Netherlands, currently living in Stockholm.</h1>
+      <h2>I am a <strong>web developer</strong> + designer from the Netherlands, currently living in Stockholm. I combine code with a touch of design to build stuff for the web.</h2>
     </section>

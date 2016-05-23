@@ -1,5 +1,5 @@
 section.projects{
-  h1{
+  p{
     margin-bottom: 30px;
   }
 
@@ -29,6 +29,32 @@ section.projects{
 
       a{
         display: inline-block;
+
+        &:before{
+          @include transition( .2s );
+
+          content: "\00bb";
+
+          left: -50px;
+          position: absolute;
+
+          opacity: 0;
+          font-size: 40px;
+          line-height: 70px;
+        }
+
+        &:after{
+          display: none;
+        }
+
+        &:hover,
+        &:focus{
+          &:before{
+            left: -30px;
+
+            opacity: 1;
+          }
+        }
       }
     }
   }

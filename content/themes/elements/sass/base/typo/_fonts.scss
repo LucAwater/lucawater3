@@ -1,7 +1,22 @@
+@font-face {font-family: 'AvenirNextLTPro-Light';src: url('../webfonts/300B50_0_0.eot');src: url('../webfonts/300B50_0_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/300B50_0_0.woff2') format('woff2'),url('../webfonts/300B50_0_0.woff') format('woff'),url('../webfonts/300B50_0_0.ttf') format('truetype');}
+
+@font-face {font-family: 'AvenirNextLTPro-Bold';src: url('../webfonts/300B50_1_0.eot');src: url('../webfonts/300B50_1_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/300B50_1_0.woff2') format('woff2'),url('../webfonts/300B50_1_0.woff') format('woff'),url('../webfonts/300B50_1_0.ttf') format('truetype');}
+
+@mixin avenir{
+  font-family: 'AvenirNextLTPro-Light';
+  font-style: normal;
+  font-weight: normal;
+
+  strong{
+    font-family: 'AvenirNextLTPro-Bold';
+    font-weight: 100;
+  }
+}
+
 @mixin gotham{
   font-family: "Gotham A", "Gotham B";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
 
   strong{
     font-weight: 500;

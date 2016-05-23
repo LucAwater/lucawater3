@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <section class="projects">
-  <h1>Selected Projects</h1>
+  <p>A selection of my projects</p>
 
   <?php
   /*
@@ -21,8 +21,7 @@
         ?>
 
         <li>
-          <span><?php echo $date; ?></span>
-          <a href="<?php echo $url; ?>" target="_blank"><h2><?php echo $title; ?></h2></a>
+          <a href="<?php echo $url; ?>" target="_blank"><h3><?php echo $title; ?></h3></a>
         </li>
 
         <?php

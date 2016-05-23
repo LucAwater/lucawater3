@@ -3,17 +3,24 @@ main{
   height: 100%;
   min-height: 100%;
   overflow: hidden;
-  padding: 100px 50px 50px;
+  padding: 150px 30px;
 
   background-color: $white;
 
-  section{
+  > *{
     width: 100%;
     max-width: 800px;
-    margin: 150px auto;
+    padding: 75px 0;
+    margin: auto;
+  }
+}
 
-    &:first-child{
-      margin-top: 0;
+@media screen and (max-width: 850px){
+  main{
+    padding: 75px 30px;
+
+    > *{
+      padding: 35px 0;
     }
   }
 }
