@@ -5,7 +5,7 @@ main{
   overflow: hidden;
   padding: 150px 30px;
 
-  background-color: $white;
+  background-color: $purple;
 
   > *{
     width: 100%;
@@ -20,6 +20,7 @@ main{
     padding: 30px;
 
     > *{
+      max-width: 600px;
       padding: 35px 0;
     }
   }

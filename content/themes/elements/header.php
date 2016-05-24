@@ -38,7 +38,7 @@
     <header>
       <h1><strong>Luc Awater</strong><br>writes code for web</h1>
     </header>
-    
+
     <section class="text">
-      <h2>I am a <strong>web developer</strong> + designer from the Netherlands, currently living in Stockholm. I combine code with a touch of design to build stuff for the web.</h2>
+      <p>I am a <strong>web developer</strong> + designer from the Netherlands, currently living in Stockholm. I combine code with a touch of design to build products for the web.</p>
     </section>
