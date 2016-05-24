@@ -64,16 +64,16 @@ article p {
 
 @media screen and (max-width: 850px) {
   h1 {
-    font-size: 8vw; }
+    font-size: 50px; }
 
   h2 {
     font-size: 18px; }
 
   h3 {
-    font-size: 8vw; }
+    font-size: 35px; }
 
   p {
-    font-size: 14px; } }
+    font-size: 18px; } }
 a {
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
@@ -142,7 +142,7 @@ body {
 
 @media screen and (max-width: 850px) {
   body {
-    padding: 10px; } }
+    padding: 0px; } }
 main {
   height: auto !important;
   height: 100%;
@@ -268,11 +268,13 @@ section.projects ul {
         opacity: 1; }
 
 @media screen and (max-width: 850px) {
+  section.projects p {
+    margin-bottom: 10px; }
   section.projects ul li {
     margin-bottom: 10px; }
     section.projects ul li a:before {
       font-size: 8vw;
-      line-height: 33px; }
+      line-height: 35px; }
     section.projects ul li a:hover:before,
     section.projects ul li a:focus:before {
       left: -20px; } }

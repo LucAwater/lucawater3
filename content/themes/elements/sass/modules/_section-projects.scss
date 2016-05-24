@@ -62,13 +62,17 @@ section.projects{
 
 @media screen and (max-width: 850px){
   section.projects{
+    p{
+      margin-bottom: 10px;
+    }
+
     ul{
       li{
         margin-bottom: 10px;
 
         a:before{
           font-size: 8vw;
-          line-height: 33px;
+          line-height: 35px;
         }
 
         a:hover,
