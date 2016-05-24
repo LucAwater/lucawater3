@@ -10,5 +10,12 @@ body{
   padding: 30px;
 
   background-size: 100%;
+  background-color: $grey-light;
   background-image: url('/content/themes/elements/img/background.jpg');
+}
+
+@media screen and (max-width: 850px){
+  body{
+    padding: 10px;
+  }
 }

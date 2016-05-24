@@ -59,3 +59,25 @@ section.projects{
     }
   }
 }
+
+@media screen and (max-width: 850px){
+  section.projects{
+    ul{
+      li{
+        margin-bottom: 10px;
+
+        a:before{
+          font-size: 8vw;
+          line-height: 33px;
+        }
+
+        a:hover,
+        a:focus{
+          &:before{
+            left: -20px;
+          }
+        }
+      }
+    }
+  }
+}
