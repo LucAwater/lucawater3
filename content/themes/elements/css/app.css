@@ -138,14 +138,10 @@ body {
   background-color: #8853F0; }
 
 body {
-  padding: 30px;
   background-size: 100%;
   background-color: #8853F0;
   background-image: url("/content/themes/elements/img/background.jpg"); }
 
-@media screen and (max-width: 850px) {
-  body {
-    padding: 0px; } }
 main {
   height: auto !important;
   height: 100%;
