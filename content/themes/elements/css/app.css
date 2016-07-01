@@ -137,18 +137,12 @@ body {
   min-height: 100%;
   background-color: #8853F0; }
 
-body {
-  background-size: 100%;
-  background-color: #8853F0;
-  background-image: url("/content/themes/elements/img/background.jpg"); }
-
 main {
   height: auto !important;
   height: 100%;
   min-height: 100%;
   overflow: hidden;
-  padding: 150px 30px;
-  background-color: #8853F0; }
+  padding: 150px 30px; }
   main > * {
     width: 100%;
     max-width: 800px;
