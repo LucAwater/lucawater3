@@ -30,6 +30,8 @@ section.projects{
       a{
         display: inline-block;
 
+        border-bottom: none;
+
         &:before{
           @include transition( .2s );
 
