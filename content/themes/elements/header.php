@@ -36,7 +36,7 @@
 <body>
   <main role="main">
     <header>
-      <h1><strong>Luc Awater</strong><br>writes code for web</h1>
+      <h1><strong>Luc Awater</strong><br>creating with code</h1>
     </header>
 
     <section class="text">
