@@ -23,11 +23,16 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Fonts from Typography.com -->
-  <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6711094/6669152/css/fonts.css" />
+  <!-- Load fonts & non-critical css asynchronously -->
+  <script>
+    function loadCSS(e,t,n){"use strict";function o(){var t;for(var i=0;i<s.length;i++){if(s[i].href&&s[i].href.indexOf(e)>-1){t=true}}if(t){r.media=n||"all"}else{setTimeout(o)}}var r=window.document.createElement("link");var i=t||window.document.getElementsByTagName("script")[0];var s=window.document.styleSheets;r.rel="stylesheet";r.href=e;r.media="only x";i.parentNode.insertBefore(r,i);o();return r}
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/app.css">
+    loadCSS( "https://cloud.typography.com/6711094/6669152/css/fonts.css" );
+    loadCSS( "<?php bloginfo('template_directory'); ?>/css/app.css" );
+  </script>
+
+  <!-- Critical stylesheet -->
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/app-critical.css">
 
   <!-- WP_HEAD() -->
   <?php wp_head(); ?>

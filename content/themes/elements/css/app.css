@@ -242,7 +242,8 @@ section.projects ul {
       text-transform: uppercase;
       letter-spacing: 1px; }
     section.projects ul li a {
-      display: inline-block; }
+      display: inline-block;
+      border-bottom: none; }
       section.projects ul li a:before {
         -webkit-transition: 0.2s;
         -moz-transition: 0.2s;
@@ -252,12 +253,13 @@ section.projects ul {
         content: "\00bb";
         left: -50px;
         position: absolute;
+        color: black;
         opacity: 0;
         font-size: 40px;
         line-height: 70px; }
       section.projects ul li a:after {
         display: none; }
-      section.projects ul li a:hover:before, section.projects ul li a:focus:before {
+      section.projects ul li a:hover:before {
         left: -30px;
         opacity: 1; }
 

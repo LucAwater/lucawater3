@@ -1,0 +1,23 @@
+{
+  "name": "lucawater3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucAwater/lucawater3.git"
+  },
+  "author": "Luc Awater",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucAwater/lucawater3/issues"
+  },
+  "homepage": "https://github.com/LucAwater/lucawater3#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-criticalcss": "^1.0.2"
+  }
+}
