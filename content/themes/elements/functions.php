@@ -3,9 +3,6 @@
  * @package WordPress
  * @subpackage HTML5_Boilerplate */
 
-// Includes
-require_once('includes/scripts.php');
-
 // Initialize mobile detect
 require_once('includes/mobile-detect.php');
 $detect = new Mobile_Detect;
