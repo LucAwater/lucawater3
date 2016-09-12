@@ -45,5 +45,5 @@
     </header>
 
     <section class="text">
-      <p>I am a <strong>web developer</strong> + designer from the Netherlands, currently living in Stockholm. I combine code with a touch of design to build products for the web.</p>
+      <p>I am a <strong>web developer</strong> + designer from the Netherlands, currently living in <del>Stockholm</del> Eindhoven. I combine code with a touch of design to build products for the web.</p>
     </section>
