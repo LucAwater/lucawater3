@@ -1,9 +1,10 @@
 :root{
-  --color-blue-1: #F6F9FF;
-  --color-blue-2: #85B4F8;
-  --color-blue-3: #6396DA;
-  --color-blue-4: #838CA1;
-  --color-blue-transparent: rgba(98, 149, 215, .2);
+  --c-text-primary: #333;
+  --c-text-secondary: #999;
+  --c-action-active: cornflowerblue;
+  --c-action-active-dark: #5875a9;
+  --c-action-inactive: #d9d9d9;
+  --c-background: #f2f2f2;
 }
 
 *{
@@ -11,7 +12,7 @@
   padding: 0;
   position: relative;
 
-  color: #333;
+  color: var(--c-text-primary);
   font-size: 16px;
   font-family: 'Noto Sans', serif;
 }
@@ -29,30 +30,54 @@ p{
 a{
   font-size: 1rem;
   transition: .35s;
-  color: var(--color-blue-2);
+  color: var(--c-action-active);
   text-decoration: none;
 }
 a:hover,
 a:focus{
-  color: var(--color-blue-3);
+  color: var(--c-action-active-dark);
 }
 
 small{
   font-size: 0.875rem;
 }
-
-section{
-  padding: 30px;
+small a{
+  font-size: 1em;
 }
 
+.text-center{
+  display: block;
+  text-align: center;
+}
+
+section,
+main,
+footer{
+  padding: 5%;
+}
+
+/* sticky footer */
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main{
+  flex: 1;
+}
+
+/* page-top */
 section.page-top{
   padding-bottom: 15px;
 }
 
+/* page-top > logo */
 section.page-top img{
   max-height: 100px;
 }
 
+/* page-top > nav */
 section.page-top nav{
   padding: 30px 0 0;
 }
@@ -60,17 +85,23 @@ section.page-top nav ul li{
   display: inline-block;
   margin-right: 30px;
 }
-
-main{
-  padding: 30px;
-  min-height: 100vh;
-
-  background-color: var(--color-blue-1);
+section.page-top nav ul li a{
+  font-size: 2.4em;
+  color: var(--c-action-inactive);
+}
+section.page-top nav ul li a:hover,
+section.page-top nav ul li.is-active a{
+  color: var(--c-action-active);
 }
 
+/* main */
+main{
+  background-color: var(--c-background);
+}
+
+/* main > section */
 main section{
   background-color: white;
-  box-shadow: 0 12px 40px -10px var(--color-blue-transparent);
 }
 main section p{
   margin-bottom: .8em;
@@ -83,5 +114,13 @@ main section p:last-child{
 main section p small{
   display: block;
 
-  color: var(--color-blue-4);
+  color: var(--c-text-secondary);
+}
+
+/* footer */
+footer{
+  background-color: var(--c-background);
+}
+footer small{
+  color: var(--c-text-secondary);
 }

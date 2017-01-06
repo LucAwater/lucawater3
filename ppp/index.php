@@ -14,7 +14,7 @@
 
       <nav>
         <ul>
-          <li><a href="#">De Partijen</a></li>
+          <li class="is-active"><a href="#">De Partijen</a></li>
           <li><a href="#">Stemwijzers</a></li>
         </ul>
       </nav>
@@ -28,9 +28,12 @@
 
           <p>Eerlijk delen, vast werk, goed wonen, een gezond leven, toegang tot scholing, emancipatie, recht op zeggenschap - het is de rode draad van de sociaaldemocratie in de strijd voor een rechtvaardige wereld.</p>
 
-          <a href="#">Terug naar overzicht</a>
+          <a href="#" class="text-center">Terug naar overzicht</a>
         </div>
       </section>
     </main>
+    <footer>
+      <small>Alle rechten voorbehouden | <a href="#">Disclaimer</a></small>
+    </footer>
   </body>
 </html>
