@@ -1,0 +1,35 @@
+.media{
+  @include flexbox;
+
+  align-items: center;
+
+  .media__media{
+    margin-right: 15px;
+
+    img{
+      min-width: 30px;
+    }
+  }
+
+  .media__body{
+    > *{
+      display: block;
+      margin-bottom: 5px;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+
+    p{
+      font-size: 1rem;
+    }
+  }
+
+  &.media--small{
+    .media__media{
+      width: auto;
+      max-height: 60px;
+    }
+  }
+}

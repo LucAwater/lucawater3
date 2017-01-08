@@ -1,6 +1,6 @@
 section.section-text{
   .section-body{
-    > *{
+    > *:not(.panel){
       margin-bottom: 1rem;
     }
 

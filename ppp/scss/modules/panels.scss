@@ -1,0 +1,13 @@
+.panel{
+  display: block;
+  padding: 25px;
+  margin-bottom: 30px;
+
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 0 12px 30px -6px rgba($c-secondary, .6);
+
+  + .panel{
+    margin-top: -15px;
+  }
+}
