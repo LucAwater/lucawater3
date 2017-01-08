@@ -11,10 +11,6 @@
     <link rel="stylesheet" href="/ppp/css/app.css">
   </head>
   <body>
-    <header>
-      <a href="#" class="btn">menu</a>
-    </header>
-
     <section id="page-top">
       <?php include 'views/party/page-top.php'; ?>
     </section>
