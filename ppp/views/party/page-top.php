@@ -2,7 +2,8 @@
 
 <nav>
   <ul>
-    <li class="is-active"><a href="#">De Partijen</a></li>
-    <li><a href="#">Stemwijzers</a></li>
+    <li class="is-active"><a href="#">Info</a></li>
+    <li><a href="#">Programma</a></li>
+    <li><a href="#">Mensen</a></li>
   </ul>
 </nav>
