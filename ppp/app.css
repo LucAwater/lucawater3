@@ -4,7 +4,7 @@
   --c-action-active: cornflowerblue;
   --c-action-active-dark: #5875a9;
   --c-action-inactive: #d9d9d9;
-  --c-background: #f2f2f2;
+  --c-background: #F7F7F8;
 }
 
 *{
@@ -86,7 +86,6 @@ section.page-top nav ul li{
   margin-right: 30px;
 }
 section.page-top nav ul li a{
-  font-size: 2.4em;
   color: var(--c-action-inactive);
 }
 section.page-top nav ul li a:hover,

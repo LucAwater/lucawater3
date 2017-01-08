@@ -1,0 +1,11 @@
+section.section-text{
+  .section-body{
+    > *{
+      margin-bottom: 1rem;
+    }
+
+    small{
+      display: block;
+    }
+  }
+}

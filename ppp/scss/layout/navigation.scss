@@ -1,0 +1,40 @@
+nav{
+  padding: 30px 0 0;
+
+  ul{
+    li{
+      display: inline-block;
+      margin-right: 30px;
+
+      a{
+        color: $c-text-secondary;
+
+        &:after{
+          @include transition( .35s );
+
+          content: "";
+
+          bottom: -15px;
+          left: -5%;
+          position: absolute;
+
+          width: 110%;
+          height: 3px;
+
+          opacity: 0;
+          background-color: $c-primary;
+        }
+      }
+
+      a:hover,
+      a:focus,
+      &.is-active a{
+        color: $c-text-primary;
+
+        &:after{
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
