@@ -41,9 +41,9 @@
 <body>
   <main role="main">
     <header>
-      <h1><strong>Luc Awater</strong><br>creating with code</h1>
+      <h1><strong>Luc Awater</strong></h1>
     </header>
 
     <section class="text">
-      <p>I am a <strong>web developer</strong> + designer from the Netherlands, currently living in <del>Stockholm</del> Eindhoven. I combine code with a touch of design to build products for the web.</p>
+      <p>I am a <strong>web developer</strong> + designer from the Netherlands, currently living in <del>Stockholm</del> Eindhoven. Trained in user experience, specialised in frontend development. Now working at <a href="http://www.haveanicedayonline.nl" target="_blank" rel="noopener noreferrer">haveanicedayonline.</a></p>
     </section>
